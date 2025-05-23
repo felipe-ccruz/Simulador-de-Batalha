@@ -11,6 +11,8 @@ public class CampoDeBatalha {
     
     public void criarBatalhao() {
         // Criação do batalhão azul
+        Tropa polimorfismo = new Gladiador();
+        batalhaoAzul.add(polimorfismo); //POLIMORFISMO
         batalhaoAzul.add(new Arqueiro());
         batalhaoAzul.add(new Arqueiro());
         batalhaoAzul.add(new Arqueiro());
@@ -33,7 +35,7 @@ public class CampoDeBatalha {
         batalhaoVermelho.add(new Gladiador());
         
         batalhaoVermelho.sort((t1, t2) -> Integer.compare(t1.getVida(), t2.getVida()));
-        Collections.reverse(batalhaoVermelho); 
+        Collections.reverse(batalhaoVermelho);  
     }
 
     public void duelo() {

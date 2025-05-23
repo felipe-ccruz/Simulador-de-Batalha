@@ -1,37 +1,39 @@
 package Personagem;
 
-public class Tropa {
+public abstract class Tropa {
     private int custo;
     private int vida;
     private int dano;
-    public Tropa() {
-        this.custo = 100;
-        this.vida = 100;
-        this.dano = 20;
+
+    public Tropa(int custo, int vida, int dano) {
+        this.custo = custo;
+        this.vida = vida;
+        this.dano = dano;
     }
 
-    public void ataque(Tropa alvo){
-        if (alvo.getVida() > 0) {
-            alvo.setVida(alvo.getVida() - getDano());
-            System.out.println("-" + getDano());
-        }
-    }
+    public abstract void ataque(Tropa alvo);
 
+    // Getters e setters
     public int getCusto() {
         return custo;
     }
+
     public void setCusto(int custo) {
         this.custo = custo;
     }
+
     public int getVida() {
         return vida;
     }
+
     public void setVida(int vida) {
         this.vida = vida;
     }
+
     public int getDano() {
         return dano;
     }
+
     public void setDano(int dano) {
         this.dano = dano;
     }
